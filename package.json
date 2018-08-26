@@ -10,6 +10,7 @@
   "keywords": [],
   "scripts": {
     "info": "npm-scripts-info",
+    "commit": "git cz",
     "build": "run-s clean && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
@@ -37,6 +38,7 @@
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
+    "commit": "Commit files using commitizen",
     "build": "Clean and rebuild the project",
     "fix": "Try to automatically fix any linting problems",
     "test": "Lint and unit test the project",
@@ -52,9 +54,10 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "sha.js": "^2.4.11"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.116",
     "ava": "1.0.0-beta.7",
     "codecov": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
@@ -78,7 +81,8 @@
     ],
     "sources": [
       "build/main/**/*.js"
-    ]
+    ],
+    "snapshotDir": "snapshots"
   },
   "config": {
     "commitizen": {
