@@ -29,7 +29,9 @@
       { "ignore-prefix": ["console.", "process.exit"] }
     ],
     "no-if-statement": true,
-    "no-loop-statement": true
+    "no-loop-statement": true,
     /* end tslint-immutable rules */
+    /* custom */
+    "no-submodule-imports": [true, "lodash"]
   }
 }
